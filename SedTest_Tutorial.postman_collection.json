@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "cdd9c4c4-8f70-40ac-8a21-bc431719f84d",
+		"name": "Sed_Test_Tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20506223"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Новый Пользователь",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "62f12d7b20ef8e6a3f016c9f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"mr\",\r\n    \"firstName\": \"Alexei\",\r\n    \"lastName\": \"Nikolaev\",\r\n    \"email\": \"A.Nikolaev222@testmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/create",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Новый пользователь 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "62f12d7b20ef8e6a3f016c9f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"mr\",\r\n\"firstName\": \"Sergei\",\r\n\"lastName\": \"Petrov\",\r\n\"gender\": \"male\",\r\n\"email\": \"S.Petrov22@testmail.com\",\r\n\"dateOfBirth\": \"3/25/1997\",\r\n\"phone\": \"8-(729)-487-25-69\",\r\n\"picture\": \"http://myphoto.com\",\r\n\"location\": \r\n        {\r\n        \"street\": \"Lybianka\",\r\n        \"city\": \"Moscow\",\r\n        \"state\": \"Moscow\",\r\n        \"country\": \"Russia\",\r\n        \"timezone\": \"+3:00\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/create",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Новый пользователь 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "62f12d7b20ef8e6a3f016c9f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"mr\",\r\n\"firstName\": \"Valeriy\",\r\n\"lastName\": \"Nikonov\",\r\n\"gender\": \"male\",\r\n\"email\": \"Nikonoff12@testmail.com\",\r\n\"dateOfBirth\": \"8/12/1997\",\r\n\"phone\": \"8-(729)-321-45-11\",\r\n\"picture\": \"http://myphoto.com\",\r\n\"location\": \r\n        {\r\n        \"street\": \"Snejnaya\",\r\n        \"city\": \"Moscow\",\r\n        \"state\": \"Moscow\",\r\n        \"country\": \"Russia\",\r\n        \"timezone\": \"+3:00\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/create",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Поиск пользователя",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "62f12d7b20ef8e6a3f016c9f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/62f22f2a93dc64320008278d",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"62f22f2a93dc64320008278d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Поиск всех пользователей",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "62f12d7b20ef8e6a3f016c9f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user?page=5&limit=8",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "5"
+								},
+								{
+									"key": "limit",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Удаление записи о пользователе",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "62f12d7b20ef8e6a3f016c9f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/62f136f03c7b4db6b1f786e4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"62f136f03c7b4db6b1f786e4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/62f22f2a93dc64320008278d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"62f22f2a93dc64320008278d"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "62f12d7b20ef8e6a3f016c9f",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
